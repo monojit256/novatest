@@ -1,4 +1,4 @@
-This is mono project.
+this is mono project.
 
 Temp project
 Tamaghna
@@ -9,6 +9,16 @@ dara dekachi moja
 create database samsung
 use samsung
 
+ o enable the Advanced help module, select the checkbox next to Advanced help. To
+dules
+Once you have enabled a new module, you should check to see if there are any
+configuration options for the module. To do this, look in the OPERATIONS
+column of the Modules page.
+
+enable the Ctools module, select the checkbox next to Chaos tools. To enable the Views
+module, select the checkboxes next to the Views and Views UI modules. Click on the
+Save configuration button to save your settings and enable your modules. You will
+receive a confirmation message at the top of the screen.
 
 create table engineer
 (
@@ -41,52 +51,3 @@ insert into customer (sname,addr,salary,job_status
 )
 values
 (@sname,@addr,@phone,@problem)
-
-
---customer update proc
-
-create proc updatecproc
-(@cust_id int,
-@sname varchar(100),
-@addr varchar(100),
-@phone varchar(100),
-@problem varchar(100)
-)
-with encryption
-as
-update customer set sname=@sname,addr=@addr,phone=@phone,problem=@problem
-where cust_id=@cust_id
-
-
-//drop table engineer
-//drop table customer
-
-
---engineer insert proc
-
-create proc insertproc
-(
-@sname varchar(100),
-@addr varchar(100),
-@salary varchar(100),
-@job_status varchar(100))
-with encryption
-as
-insert into engineer (sname,addr,salary,job_status
-)
-values
-(@sname,@addr,@salary,@job_status)
-
---engineer update proc
-
-create proc updateproc
-(@emp_id int,
-@sname varchar(100),
-@addr varchar(100),
-@salary varchar(100),
-@job_status varchar(100)
-)
-with encryption
-as
-update engineer set sname=@sname,addr=@addr,salary=@salary,job_status=@job_status
-where emp_id=@emp_id
